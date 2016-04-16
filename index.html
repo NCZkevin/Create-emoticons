@@ -1,12 +1,14 @@
-<html>
+<html ng-app="myApp">
     <head>
         <meta name="layout" content="main">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <!-- <script type="text/javascript" src="http://html2canvas.hertzen.com/build/html2canvas.js"></script> -->
-        <script type="text/javascript" src="js/html2canvas.js">
-
-        </script>
+        <script type="text/javascript" src="js/html2canvas.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
         <script  type="text/javascript" >
         $(document).ready( function(){
                 $(".example1").on("click", function(event) {
@@ -30,20 +32,30 @@
 
         </script>
     </head>
-    <body>
+    <body >
 
+      <div class="container">
+        <div class="row">
+          <input type="text" ng-model="name">
+          <div style="position: relative; " id="biaoqing" >
+            <img src="images/ph.jpg"   class="img-responsive" alt="">
+            <span style="position: absolute; top: 0; left: 5;">{{name}}</span>
+          </div>
 
+          <!-- <div style="background:url('images/ph.jpg') no-repeat;">嘿嘿嘿</div> -->
+          <!-- <textArea id="textArea" col="20" rows="10" ></textArea> -->
+          <input class="example1" type="button" value="生成">
+          生成界面如下：
+        </div>
+      </div>
         <!-- <div class="" style="background-color: #abc;">
             计算机天堂测试html5页面截图
             <br>jsjtt.com
         </div> -->
-        <div style="position: relative; " id="biaoqing">
-        <img src="images/ph.jpg"  width="96px" height="128px" alt="">
-        <span style="position: absolute; top: 0; left: 0;">嘿嘿嘿</span>
-        </div>
-        <!-- <div style="background:url('images/ph.jpg') no-repeat;">嘿嘿嘿</div> -->
-        <!-- <textArea id="textArea" col="20" rows="10" ></textArea> -->
-        <input class="example1" type="button" value="button">
-        生成界面如下：
+        <!-- <div ng-app="">
+ 	<p>名字 : <input type="text" ng-model="name"></p>
+ 	<h1>Hello {{name}}</h1>
+</div> -->
+
     </body>
 </html>

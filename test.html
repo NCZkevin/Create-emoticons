@@ -1,0 +1,33 @@
+<!-- <html ng-app>
+<head>
+  <script src="js/angular.min.js"></script>
+  <script type="text/javascript">
+    function hellocontroller($scope) {
+      $scope.greeting = {text:'hello'};
+    }
+  </script>
+</head>
+<body >
+  <div ng-controller="hellocontroller">
+    <input ng-model="greeting.text">
+    <p>
+      {{greeting.text}},world
+    </p>
+  </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="">
+ 	<p>名字 : <input type="text" ng-model="name"></p>
+ 	<h1>Hello {{name}}</h1>
+</div>
+
+</body>
+</html>
