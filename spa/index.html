@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminApp">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>angular SPA项目实战 </title>
+
+  <!-- Bootstrap core CSS -->
+
+  <link href="src/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="src/fonts/css/font-awesome.min.css" rel="stylesheet">
+  <link href="src/css/animate.css" rel="stylesheet">
+  <link href='src/css/loading-bar.css' rel='stylesheet' />
+
+  <!-- Custom styling plus plugins -->
+  <link href="src/css/custom.css" rel="stylesheet">
+
+  <!--   引入jquery  -->
+  <script src="src/js/jquery.js"></script>
+  <script src="src/js/angular.js"></script>
+
+  <!--   路由模块  -->
+  <script src="src/js/ngmodules/angular-ui-router.js"></script>
+
+  <!--   页面加载前的 Loading效果  -->
+  <script src="src/js/ngmodules/loading-bar.js"></script>
+
+  <!--   主要用于按需加载 js文件，如控制器，依赖指令相关  -->
+  <script src="src/js/ngmodules/ocLazyLoad.min.js"></script>
+
+  <!--   左侧导航 与 顶部公用部分  -->
+  <script src="src/components/nav/nav.js"></script>
+  <script src="src/components/topbar/topbar.js"></script>
+
+  <!--  使用日历时所依赖的 Js 文件  -->
+  <script src="src/js/plugins/moment.js"></script>
+  <script src="src/js/plugins/moment-zh.js"></script>
+  <script src="src/js/plugins/moment-timezone-with-data.js"></script>
+
+  <!--   文本编辑器  -->
+  <script src="src/components/simditor/simditor/simditor-all.js"></script>
+  <script src="src/components/simditor/angular-editor.js"></script>
+  
+  <script src="src/components/textAngular/textAngular-rangy.min.js"></script>
+  <script src="src/components/textAngular/textAngular-sanitize.min.js"></script>
+  <script src="src/components/textAngular/textAngular.min.js"></script>
+
+  <!--   定义了一些基本变量与方法以及路由配置  -->
+  <script src="src/js/main.js"></script>
+
+  <!--   使用一个最外层的admin控制器，可以定义一些 '全局' 的方法与属性方便使用  -->
+  <script src="src/js/controller/admin.js"></script>
+
+</head>
+
+<body ng-class="{false: 'nav-md',true: 'nav-sm'}[isCollapse]" ng-controller="adminCtrl">
+  <div class="container body">
+
+      <div class="main_container">
+            <div class="col-md-3 left_col">
+                <nav-list/>
+            </div>
+
+            <!-- 头部使用的 自定义指令组件 -->
+            <div class="top_nav">
+                <top-bar/>
+            </div>
+
+
+            <div class="right_col" role="main" style="height:{{height}}px">
+                <!--  ui-view  显示路由对应的模板 -->
+                <div class="row tile_count" ui-view> </div>
+
+                <!-- footer content -->
+                <footer>
+                    <div class="copyright-info">
+                        <p class="text-right">项目制作人  <a href="https://www.byex.cn" target="_blank"><strong>hishion</strong></a>  </p>
+                        <p class="text-right">本实例模板来自 <a href="https://colorlib.com" target="_blank">Colorlib</a>  </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
+            </div>
+      </div>
+  </div>
+</body>
+</html>

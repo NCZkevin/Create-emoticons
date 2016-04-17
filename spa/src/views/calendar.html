@@ -1,0 +1,83 @@
+<div class="row bounceInRight animated" ng-controller="calendarCtrl">
+    <div class="col-lg-12 col-xs-12">
+      <div class="page-title"><strong>日历</strong></div>
+    </div>
+
+
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+        <div  class="x_panel">
+          <div class="x_title"><h5><strong>date-picker</strong></h5></div>
+          <div class="x_content">
+            <div class="minPanel">
+                <div date-picker></div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+        <div  class="x_panel">
+          <div class="x_title"><h5><strong>date-range</strong></h5></div>
+          <div class="x_content">
+              <div class="minPanel">
+                  <div date-range start="dates.minDate" end="dates.maxDate" date-change="changeDate" view="date" min-view="date" timezone="UTC"></div>
+              </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+        <div  class="x_panel">
+          <div class="x_title"><h5><strong>date-time</strong></h5></div>
+          <div class="x_content">
+              <div class="minPanel">
+                  <div class="row">
+                      <div class="col-xs-8 col-xs-offset-2">
+                        <input type="text" class="form-control" date-time ng-model="dates.today" view="hours" format="YYYY-MM-DD,hh:mm:ss a">
+                      </div>
+                  </div>
+                  <div class="divider"></div>
+
+                  <div class="row">
+                      <div class="col-xs-8 col-xs-offset-2">
+                        <input type="text" class="form-control" date-time ng-model="dates.today" view="date" format="YYYY年MM月DD日">
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="col-lg-6 col-sm-6 col-xs-12">
+        <div  class="x_panel">
+          <div class="x_title"><h5><strong>date-time</strong></h5></div>
+          <div class="x_content">
+              <div class="minPanel">
+                  <div class="row">
+                      <div class="col-xs-8 col-xs-offset-2">
+                        <input type="text" class="form-control" date-time ng-model="dates.today" view="hours" format="dddd,YYYY-MM-DD">
+                      </div>
+                  </div>
+                  <div class="divider"></div>
+
+                  <div class="row">
+                      <div class="col-xs-8 col-xs-offset-2">
+                        <input type="text" class="form-control" date-time ng-model="dates.today" view="date" format="YYYY-MM-DD,hh:mm:ss a">
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+                
+</div>

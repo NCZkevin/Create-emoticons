@@ -1,0 +1,26 @@
+<div class="row bounceInRight animated"  ng-controller="userAddCtrl">
+    <div class="col-xs-12">
+        <div class="page-title">
+            用户 &gt; 
+            <strong>添加用户</strong>
+        </div>
+    </div>
+
+    <div class="col-xs-12">
+        <div  class="x_panel">
+            <div class="x_title">添加用户</div>
+            <div class="x_content">
+                <form name="userAddForm" novalidate ng-submit="doSubmit($event)">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" class="form-control" ng-model="data.name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="添加" class="btn btn-primary" ng-disabled="userAddForm.$invalid">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

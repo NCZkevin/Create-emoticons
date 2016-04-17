@@ -1,0 +1,28 @@
+<div class="row bounceInRight animated" ng-controller="editorCtrl">
+    <div class="col-lg-12 col-xs-12">
+      <div class="page-title"><strong>编辑器</strong></div>
+    </div>
+
+    <div class="col-xs-12">
+        <div  class="x_panel">
+          <div class="x_title"><h5><strong>textAngular</strong></h5></div>
+          <div class="x_content">
+              <div text-angular="" ng-model="htmlContent" name="demo-editor" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
+
+              <pre ng-bind="htmlContent" class="white-box"></pre>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12">
+        <div  class="x_panel">
+          <div class="x_title"><h5><strong>simditor</strong></h5></div>
+          <div class="x_content">
+              <div simditor ng-model="editor" placeholder="some placeholder"></div>
+          </div>
+        </div>
+    </div>
+
+
+</div>

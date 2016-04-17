@@ -1,0 +1,65 @@
+<div class="row bounceInRight animated" ng-controller="tooltipCtrl">
+    <div class="col-xs-12">
+        <div class="page-title"><strong>tooltips示例</strong></div>
+    </div>
+
+    <div class="col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h5><strong>angular-tooltips 使用与示例</strong></h5>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <pre>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link href="angular-tooltips.min.css" rel="stylesheet" type="text/css"/&gt;
+&lt;/head&gt;
+&lt;body ng-app="app"&gt;
+  //.....
+  &lt;script src="angular-tooltips.min.js"&gt;&lt;/script&gt;
+
+  angular.module('app', [
+    '720kb.tooltips'
+  ]);
+&lt;/body&gt;
+&lt;/html&gt;
+                        </pre>
+                    </div>
+                    <div class="col-xs-12">
+                        <p><br></p>
+                        <h5>方向 template-side</h5>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <p><a href="" tooltips tooltip-template="tooltip">鼠标移过来 [默认top]</a></p>
+                        <code>
+                            &lt;a href="" tooltips tooltip-template="tooltip"&gt; 鼠标移过来 [默认top] &lt;/a&gt;
+                        </code>
+                    </div>        
+                    <div class="col-xs-12 col-sm-3">
+                        <p><a href="" tooltips tooltip-template="tooltip" tooltip-side="right">鼠标移过来 [right]</a></p>
+                        <code>
+                            &lt;a href="" tooltips tooltip-template="tooltip"  tooltip-side="right"&gt; 鼠标移过来 [right] &lt;/a&gt;
+                        </code>
+                    </div>         
+                    <div class="col-xs-12 col-sm-3">
+                        <p><a href="" tooltips tooltip-template="tooltip" tooltip-side="bottom">鼠标移过来 [bottom]</a></p>
+                        <code>
+                            &lt;a href="" tooltips tooltip-template="tooltip"  tooltip-side="bottom"&gt; 鼠标移过来 [bottom] &lt;/a&gt;
+                        </code>
+                    </div>         
+                    <div class="col-xs-12 col-sm-3">
+                        <p><a href="" tooltips tooltip-template="tooltip" tooltip-side="left">鼠标移过来 [left]</a></p>
+                        <code>
+                            &lt;a href="" tooltips tooltip-template="tooltip"  tooltip-side="left"&gt; 鼠标移过来 [left] &lt;/a&gt;
+                        </code>
+                    </div>    
+                        
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
