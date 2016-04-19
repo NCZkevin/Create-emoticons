@@ -1,0 +1,105 @@
+<html ng-app="myApp">
+    <head>
+        <meta name="layout" content="main">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+    </head>
+    <body >
+
+      <div class="container" id="app">
+        <div class="row">
+            <div class="col-center-block">
+              <h2>制作自己的表情包</h2>
+              <p>输入文字</p>
+              <input type="text" v-model="name">
+              <h4>选择字体</h4>
+              <select v-model="selectedfont">
+                <option v-for="option in optionsfont" v-bind:value="option.text">
+                  {{ option.text }}
+                </option>
+              </select>
+              <span>Selected: {{ selectedfont }}</span>
+
+
+            <h4>选择颜色</h4>
+            <select v-model="selectedcolor">
+              <option v-for="option in options" v-bind:value="option.text">
+                {{ option.text }}
+              </option>
+            </select>
+            <span>Selected: {{ selectedcolor }}</span>
+
+            <h4>调整文字位置</h4>
+            水平方向：<input type="range" v-model="stat.top" min="0" max="100">
+            垂直方向：<input type="range" v-model="stat.left" min="0" max="100">
+          </div>
+
+
+
+        </div>
+          <div class="col-center-block">
+
+            <div style="position: relative; " id="biaoqing" >
+              <img src="images/test.jpg"   class="img-responsive" alt="">
+              <span v-bind:style="{ color: selectedcolor,top: stat.top,left: stat.left}">{{name}}</span>
+            </div>
+            <input class="btn btn-primary example1" type="button" value="生成">
+            生成界面如下：
+          </div>
+
+
+          <!-- <div style="background:url('images/ph.jpg') no-repeat;">嘿嘿嘿</div> -->
+          <!-- <textArea id="textArea" col="20" rows="10" ></textArea> -->
+          <div id="newimage">
+
+          </div>
+        </div>
+
+        <!-- <div class="" style="background-color: #abc;">
+            计算机天堂测试html5页面截图
+            <br>jsjtt.com
+        </div> -->
+        <!-- <div ng-app="">
+ 	<p>名字 : <input type="text" ng-model="name"></p>
+ 	<h1>Hello {{name}}</h1>
+</div> -->
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="http://html2canvas.hertzen.com/build/html2canvas.js"></script> -->
+<script type="text/javascript" src="js/html2canvas.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script  type="text/javascript" >
+$(document).ready( function(){
+        $(".example1").on("click", function(event) {
+                event.preventDefault();
+                html2canvas(document.getElementById('biaoqing'), {
+                allowTaint: true,
+                taintTest: false,
+                onrendered: function(canvas) {
+                    canvas.id = "mycanvas";
+                    //document.body.appendChild(canvas);
+                    //生成base64图片数据
+                    var dataUrl = canvas.toDataURL();
+                    var newImg = document.createElement("img");
+                    newImg.src =  dataUrl;
+                    // document.body.appendChild(newImg);
+                    document.getElementById('newimage').appendChild(newImg);
+                }
+            });
+        });
+
+});
+
+</script>
+    </body>
+</html>
